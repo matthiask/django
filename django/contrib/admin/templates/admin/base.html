@@ -20,6 +20,108 @@
 </head>
 {% load i18n %}
 
+<style>
+:root {
+  --primary: #79aec8;
+  --secondary: #417690;
+  --accent: #f5dd5d;
+
+  --body-fg: #333;
+  --body-bg: #fff;
+  --body-muted-color: #666;
+  --body-quiet-color: #999;
+  --body-screaming-color: #000;
+
+  --header-color: #ffc;
+  --header-branding-color: var(--accent);
+  --header-bg: var(--secondary);
+  --header-link-color: #fff;
+
+  --breadcrumbs-fg: #c4dce8;
+  --breadcrumbs-link-fg: var(--body-bg);
+  --breadcrumbs-bg: var(--primary);
+
+  --link-fg: #447e9b;
+  --link-hover-color: #036;
+  --link-selected-fg: #5b80b2;
+
+  --hairline-color: #e8e8e8;
+  --border-color: #ccc;
+
+  --error-fg: #ba2121;
+
+  --message-success-bg: #dfd;
+  --message-warning-bg: #ffc;
+  --message-error-bg: #ffefef;
+
+  --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
+  --selected-bg: #e4e4e4;
+
+  --button-fg: #fff;
+  --button-bg: var(--primary);
+  --button-hover-bg: #609ab6;
+  --default-button-bg: var(--secondary);
+  --default-button-hover-bg: #205067;
+  --close-button-bg: #bbb;
+  --close-button-hover-bg: #aaa;
+  --delete-button-bg: #ba2121;
+  --delete-button-hover-bg: #a41515;
+
+  --object-tools-fg: var(--button-fg);
+  --object-tools-bg: #999;
+  --object-tools-hover-bg: var(--secondary);
+
+  --selected: #ffc;
+}
+
+/* Purple, just as an experiment to see what's missing *
+:root {
+  --primary: #9774d5;
+  --secondary: #785cab;
+  --link-fg: #7c449b;
+  --link-selected-fg: #8f5bb2;
+}
+
+/* */
+
+/* I don't personally like dark mode too much, but helps find missing vars */
+disabled :root {
+  --primary-h: 125; /* Original: 200 */
+  --primary-s: 42%;
+  --primary-l: 63%;
+
+  /* Experiment, would be nice to calculate all colors from only three primary
+     H/S/L values */
+  --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --header-bg: hsl(var(--primary-h), calc(var(--primary-s) - 5%), calc(var(--primary-l) - 20%));
+
+  --link-fg: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l) + 10%));
+  --link-hover-color: hsl(var(--primary-h), calc(var(--primary-s) + 10%), calc(var(--primary-l) - 10%));
+  --link-selected-fg: hsl(var(--primary-h), calc(var(--primary-s) - 10%), calc(var(--primary-l) - 10%));
+
+  --breadcrumbs-fg: hsl(var(--primary-h), calc(var(--primary-s) + 0%), calc(var(--primary-l) + 20%));
+  --button-bg: var(--primary);
+  --button-hover-bg: hsl(var(--primary-h), calc(var(--primary-s) - 10%), calc(var(--primary-l) - 10%));
+  --default-button-bg: hsl(var(--primary-h), calc(var(--primary-s) + 0%), calc(var(--primary-l) - 20%));
+  --default-button-hover-bg: hsl(var(--primary-h), calc(var(--primary-s) - 10%), calc(var(--primary-l) - 30%));
+
+  --body-fg: #fff;
+  --body-bg: #333;
+  --body-muted-color: #aaa;
+  --body-quiet-color: #999;
+
+  --hairline-color: #444;
+  --border-color: #555;
+
+  --darkened-bg: #3a3a3a;
+  --lightgrey-bg: #666;
+  --body-screaming-color: #fff;
+  --button-fg: #fff;
+
+  --selected: #868654;
+}
+</style>
+
 <body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
   data-admin-utc-offset="{% now "Z" %}">
 
