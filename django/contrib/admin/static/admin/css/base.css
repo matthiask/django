@@ -2,6 +2,8 @@
     DJANGO Admin styles
 */
 
+@import url(fonts.css);
+
 /* VARIABLE DEFINITIONS */
 :root {
   --primary: #79aec8;
@@ -55,8 +57,6 @@
 
   --selected: #ffc;
 }
-
-@import url(fonts.css);
 
 html, body {
     height: 100%;
