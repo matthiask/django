@@ -26,7 +26,7 @@ form .form-row p {
 
 label {
     font-weight: normal;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-size: 13px;
 }
 
@@ -222,7 +222,7 @@ fieldset.collapsed {
 
 fieldset.collapsed h2 {
     background: var(--darkened-bg);
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 fieldset .collapse-toggle {
@@ -386,7 +386,7 @@ body.popup .submit-row {
 
 .inline-related h3 {
     margin: 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     padding: 5px;
     font-size: 13px;
     background: var(--darkened-bg);
@@ -456,7 +456,7 @@ body.popup .submit-row {
     overflow: hidden;
     font-size: 9px;
     font-weight: bold;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     _width: 700px;
 }
 
@@ -473,7 +473,7 @@ body.popup .submit-row {
 
 .inline-group div.add-row,
 .inline-group .tabular tr.add-row td {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     background: var(--darkened-bg);
     padding: 8px 10px;
     border-bottom: 1px solid var(--hairline-color);

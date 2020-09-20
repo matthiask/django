@@ -44,7 +44,7 @@
 }
 
 #changelist .paginator {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     border-bottom: 1px solid var(--hairline-color);
     background: var(--body-bg);
     overflow: hidden;
@@ -68,7 +68,7 @@
 }
 
 #changelist table tfoot {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 /* TOOLBAR */
@@ -79,7 +79,7 @@
     border-top: 1px solid var(--hairline-color);
     border-bottom: 1px solid var(--hairline-color);
     background: var(--darkened-bg);
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 #toolbar form input {

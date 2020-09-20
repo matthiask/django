@@ -12,9 +12,8 @@
 
   --body-fg: #333;
   --body-bg: #fff;
-  --body-muted-color: #666;
-  --body-quiet-color: #666; /* Previously #999, but contrast of 2.68 is awful */
-  --body-screaming-color: #000;
+  --body-quiet-color: #666;
+  --body-loud-color: #000;
 
   --header-color: #ffc;
   --header-branding-color: var(--accent);
@@ -118,7 +117,7 @@ h1 {
     margin: 0 0 20px;
     font-weight: 300;
     font-size: 20px;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 h2 {
@@ -134,7 +133,7 @@ h2.subhead {
 h3 {
     font-size: 14px;
     margin: .8em 0 .3em 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-weight: bold;
 }
 
@@ -147,7 +146,7 @@ h4 {
 h5 {
     font-size: 10px;
     margin: 1.5em 0 .5em 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -198,7 +197,7 @@ blockquote {
 
 code, pre {
     font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-size: 12px;
     overflow-x: auto;
 }
@@ -291,7 +290,7 @@ th {
 
 thead th,
 tfoot td {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     padding: 5px 10px;
     font-size: 11px;
     background: var(--body-bg);
@@ -306,7 +305,7 @@ tfoot td {
 }
 
 thead th.required {
-    color: var(--body-screaming-color);
+    color: var(--body-loud-color);
 }
 
 tr.alt {
@@ -334,7 +333,7 @@ thead th {
 }
 
 thead th a:link, thead th a:visited {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 thead th.sorted {
@@ -939,7 +938,7 @@ table#change-history tbody th {
 }
 
 #content-related h3 {
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     padding: 0 16px;
     margin: 0 0 16px;
 }

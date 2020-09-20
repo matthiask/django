@@ -33,7 +33,7 @@
 
 .selector .selector-available h2 {
     background: var(--darkened-bg);
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 .selector .selector-filter {
@@ -125,7 +125,7 @@ a.selector-chooseall, a.selector-clearall {
     overflow: hidden;
     font-weight: bold;
     line-height: 16px;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     text-decoration: none;
     opacity: 0.3;
 }
@@ -260,7 +260,7 @@ p.datetime {
     line-height: 20px;
     margin: 0;
     padding: 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-weight: bold;
 }
 
@@ -321,7 +321,7 @@ p.url {
     line-height: 20px;
     margin: 0;
     padding: 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-size: 11px;
     font-weight: bold;
 }
@@ -336,7 +336,7 @@ p.file-upload {
     line-height: 20px;
     margin: 0;
     padding: 0;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-size: 11px;
     font-weight: bold;
 }
@@ -410,7 +410,7 @@ span.clearable-file-input label {
     font-weight: 400;
     font-size: 12px;
     text-align: center;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 .calendar td {
@@ -440,7 +440,7 @@ span.clearable-file-input label {
     font-weight: 400;
     padding: 6px;
     text-decoration: none;
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
 }
 
 .calendar td a:focus, .timelist a:focus,
@@ -469,7 +469,7 @@ span.clearable-file-input label {
 
 .calendar-shortcuts {
     background: var(--body-bg);
-    color: var(--body-muted-color);
+    color: var(--body-quiet-color);
     font-size: 11px;
     line-height: 11px;
     border-top: 1px solid var(--hairline-color);
