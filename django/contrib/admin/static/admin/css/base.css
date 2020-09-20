@@ -47,7 +47,7 @@
   --default-button-bg: var(--secondary);
   --default-button-hover-bg: #205067;
   --close-button-bg: #888; /* Previously #bbb, contrast 1.92 */
-  --close-button-hover-bg: #777;
+  --close-button-hover-bg: #747474;
   --delete-button-bg: #ba2121;
   --delete-button-hover-bg: #a41515;
 
