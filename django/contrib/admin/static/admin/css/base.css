@@ -13,7 +13,7 @@
   --body-fg: #333;
   --body-bg: #fff;
   --body-muted-color: #666;
-  --body-quiet-color: #999;
+  --body-quiet-color: #666; /* Previously #999, but contrast of 2.68 is awful */
   --body-screaming-color: #000;
 
   --header-color: #ffc;
@@ -39,23 +39,22 @@
   --message-error-bg: #ffefef;
 
   --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-  --selected-bg: #e4e4e4;
+  --selected-bg: #e4e4e4; /* E.g. selected table cells */
+  --selected-row: #ffc;
 
   --button-fg: #fff;
   --button-bg: var(--primary);
   --button-hover-bg: #609ab6;
   --default-button-bg: var(--secondary);
   --default-button-hover-bg: #205067;
-  --close-button-bg: #bbb;
-  --close-button-hover-bg: #aaa;
+  --close-button-bg: #888; /* Previously #bbb, contrast 1.92 */
+  --close-button-hover-bg: #777;
   --delete-button-bg: #ba2121;
   --delete-button-hover-bg: #a41515;
 
   --object-tools-fg: var(--button-fg);
-  --object-tools-bg: #999;
+  --object-tools-bg: var(--close-button-bg);
   --object-tools-hover-bg: var(--secondary);
-
-  --selected: #ffc;
 }
 
 html, body {

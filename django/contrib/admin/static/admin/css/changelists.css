@@ -279,7 +279,7 @@
 }
 
 #changelist table tbody tr.selected {
-    background-color: var(--selected);
+    background-color: var(--selected-row);
 }
 
 #changelist .actions {
