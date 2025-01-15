@@ -4,12 +4,14 @@ Form classes
 
 import copy
 import datetime
+import warnings
 
 from django.core.exceptions import NON_FIELD_ERRORS, ValidationError
 from django.forms.fields import Field
 from django.forms.utils import ErrorDict, ErrorList, RenderableFormMixin
 from django.forms.widgets import Media, MediaDefiningClass
 from django.utils.datastructures import MultiValueDict
+from django.utils.deprecation import RemovedInDjango61Warning
 from django.utils.functional import cached_property
 from django.utils.translation import gettext as _
 
@@ -130,8 +132,19 @@ class BaseForm(RenderableFormMixin):
         self.bound_field_class = (
             bound_field_class
             or self.bound_field_class
-            or self.renderer.bound_field_class
+            or getattr(self.renderer, "bound_field_class", None)
         )
+        if self.bound_field_class is None:
+            from django.forms.boundfield import BoundField
+
+            self.bound_field_class = BoundField
+
+            warnings.warn(
+                f"The form renderer {self.renderer!r} doesn't define a "
+                "bound_field_class attribute.",
+                RemovedInDjango61Warning,
+                stacklevel=2,
+            )
 
     def order_fields(self, field_order):
         """

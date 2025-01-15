@@ -25,7 +25,7 @@ from django.template import Context, Template
 from django.test import SimpleTestCase, TestCase, ignore_warnings, skipUnlessDBFeature
 from django.test.utils import isolate_apps
 from django.utils.choices import BlankChoiceIterator
-from django.utils.deprecation import RemovedInDjango60Warning
+from django.utils.deprecation import RemovedInDjango60Warning, RemovedInDjango61Warning
 from django.utils.version import PY314, PYPY
 
 from .models import (
@@ -848,7 +848,11 @@ class ModelFormBaseTest(TestCase):
 
     def test_renderer_kwarg(self):
         custom = object()
-        self.assertIs(ProductForm(renderer=custom).renderer, custom)
+        with self.assertWarnsMessage(
+            RemovedInDjango61Warning, "define a bound_field_class attribute"
+        ):
+            f = ProductForm(renderer=custom)
+        self.assertIs(f.renderer, custom)
 
     def test_default_splitdatetime_field(self):
         class PubForm(forms.ModelForm):
