@@ -799,6 +799,11 @@ class FormsMediaTestCase(SimpleTestCase):
         self.assertEqual(merged._css_lists, [{"screen": ["a.css"]}])
         self.assertEqual(merged._js_lists, [["a"]])
 
+    def test_add_other(self):
+        """Media.__add__ shouldn't assume media instances"""
+        with self.assertRaisesRegex(TypeError, "unsupported operand type"):
+            Media() + 3
+
 
 @override_settings(
     STATIC_URL="http://media.example.com/static/",
